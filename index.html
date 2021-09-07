@@ -13,26 +13,25 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Hello World">
-  <!-- Bootstrap CSS -->
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <title>JS IDE</title>
 </head>
 
 <body>
-  <div>
-    <nav class="text-dark d-flex align-items-center pl-2 bg-warning"><span>Editor (Use Ctrl-Enter to execute)</span>
-      <div class="btn btn-warning" id="execute-btn" action>EXECUTE</div>
+  <header>
+    <nav id="top-nav"><span>Editor (Use Ctrl-Enter to execute)</span>
+      <div class="btn" id="execute-btn" action>EXECUTE</div>
     </nav>
+  </header>
+  <div id="editor-container">
     <div id="editor"></div>
   </div>
-  <div>
-    <nav class="text-light d-flex align-items-center pl-2 bg-dark"><span>Dev Console (Use Ctrl-I to clear
+  <div id="console-container">
+    <nav id="console-separator"><span>Dev Console (Use Ctrl-I
+        to clear
         console)</span>
-      <div class="btn btn-dark" id="clear-btn" action>CLEAR</div>
+      <div class="btn" id="clear-btn" action>CLEAR</div>
     </nav>
-    <pre id="console" class="border border-dark bg-light text-dark p-2">Welcome to the JS Console<br />&raquo;  </pre>
+    <pre id="console">Welcome to the JS Console<br />&raquo;  </pre>
   </div>
 
   <script src="./assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>

@@ -5,7 +5,7 @@ editorElement.textContent = `function echo(m) {\n\treturn m;\n}\nconsole.log(ech
 // initialize the editor environment using the ace library
 var editor = ace.edit("editor");
 editor.session.setMode("ace/mode/javascript"); // editor language
-editor.setTheme("ace/theme/dawn"); // editor theme
+editor.setTheme("ace/theme/dracula"); // editor theme
 editor.session.setTabSize(4);
 editor.session.setUseWrapMode(true);
 

@@ -18,26 +18,42 @@
 
 <body>
   <header>
-    <nav id="top-nav"><span>Editor (Use Ctrl-Enter to execute)</span>
+    <nav id="top-nav">
+      <div class="top-nav-shelf">
+        <div class="top-nav-links">
+          <a href="/" class="active">Home</a>
+        </div>
+      </div>
+    </nav>
+    <nav class="top-nav-editor"><span>Editor (Use Ctrl-Enter to execute)</span>
       <div class="btn" id="execute-btn" action>EXECUTE</div>
     </nav>
   </header>
-  <div id="editor-container">
-    <div id="editor"></div>
-  </div>
-  <div id="console-container">
-    <nav id="console-separator"><span>Dev Console (Use Ctrl-I
-        to clear
-        console)</span>
-      <div class="btn" id="clear-btn" action>CLEAR</div>
-    </nav>
-    <pre id="console">Welcome to the JS Console<br />&raquo;  </pre>
-  </div>
+  <main>
+    <div id="editor-container">
+      <div id="editor"></div>
+    </div>
+    <div id="console-container">
+      <nav id="console-separator"><span>Dev Console (Use Ctrl-I
+          to clear
+          console)</span>
+        <div class="btn" id="clear-btn" action>CLEAR</div>
+      </nav>
+      <pre id="console">Welcome to the JS Console<br />&raquo;  </pre>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="copyright">
+      Made with <span>&hearts;</span> by Gabriel Menezes | Using Ace editor</i>
+    </p>
+  </footer>
 
   <script src="./assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="./assets/js/index.js" type="text/javascript" charset="utf-8"></script>
   <script src="./assets/js/console.js" type="text/javascript" charset="utf-8"></script>
   <script src="./assets/js/main.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 
 </html>

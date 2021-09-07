@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 
-body,
-html {
+html, body {
   font-family: "Courier Prime", monospace;
   height: 100%;
 }
@@ -70,12 +69,13 @@ nav > span {
   border-radius: 5px;
   border: solid 1px #499e57;
   padding: 5px 10px;
-  background-color: #04aa6d;
+  background-color: #4AD870;
+  #4AD870
   color: white;
   cursor: pointer;
   font: "Courier Prime";
 }
 
 .btn:hover {
-  background-color: rgba(60, 168, 78, 0.8);
+  background-color: #04aa6d;
 }

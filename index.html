@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Bootstrap CSS -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <title>JS IDE</title>
+</head>
+
+<body>
+  <div>
+    <nav class="text-dark d-flex align-items-center pl-2 bg-warning"><span>Editor (Use Ctrl-Enter to execute)</span>
+      <div class="btn btn-warning" action>EXECUTE</div>
+    </nav>
+    <div id="editor"></div>
+  </div>
+  <div>
+    <nav class="text-light d-flex align-items-center pl-2 bg-dark"><span>Dev Console (Use Ctrl-I to clear
+        console)</span>
+      <div class="btn btn-dark" action>CLEAR</div>
+    </nav>
+    <pre id="console" class="border border-dark bg-light text-dark p-2">Welcome to the JS Console<br />&raquo;  </pre>
+  </div>
+
+  <!-- jQuery first-->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="/assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/assets/js/index.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/assets/js/console.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

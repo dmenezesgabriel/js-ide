@@ -30,7 +30,6 @@ header {
 
 #top-nav a {
   float: left;
-  text-align: center;
   text-decoration: none;
   font-size: 15px;
   color: white;
@@ -43,37 +42,39 @@ header {
   color: black;
 }
 
-.top-nav-editor {
-  background-color: #212529;
-  color: white;
-  display: flex;
-  align-items: center;
+main {
+  height: 85vh;
 }
 
-nav {
+.editor-nav,
+.console-nav {
+  background-color: #212529;
+  color: white;
+  padding: 5px;
+}
+
+.editor-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 nav > span {
-  display: block;
-  padding: 10px;
   font-size: 15px;
+}
+
+.right {
+  float: right;
+}
+
+.right-align-d-flex {
+  margin-left: auto;
 }
 
 #editor {
   height: 100%;
 }
 
-main {
-  height: 85vh;
-}
-
 #editor-container {
   height: 70%;
-  display: flex;
-  flex-direction: column;
 }
 
 #console-container {
@@ -81,13 +82,6 @@ main {
   display: flex;
   flex-direction: column;
   background-color: #282a36;
-  color: white;
-}
-
-#console-separator {
-  display: flex;
-  background-color: #212529;
-  align-items: center;
   color: white;
 }
 
@@ -102,6 +96,10 @@ main {
 
 [action] {
   cursor: pointer;
+}
+
+.inner {
+  vertical-align: middle;
 }
 
 .btn {
@@ -119,6 +117,7 @@ main {
 }
 
 footer {
+  position: absolute;
   height: 5vh;
   bottom: 0;
   left: 0;
@@ -128,3 +127,9 @@ footer {
   text-align: center;
   font-size: 12px;
 }
+
+@media (max-width: 680px) {
+  nav > span {
+    display: none;
+  }
+} ;

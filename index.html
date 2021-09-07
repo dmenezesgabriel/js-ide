@@ -13,7 +13,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Hello World">
-  <title>JS IDE</title>
+  <title>IDEjs</title>
 </head>
 
 <body>
@@ -25,8 +25,11 @@
         </div>
       </div>
     </nav>
-    <nav class="top-nav-editor"><span>Editor (Use Ctrl-Enter to execute)</span>
-      <div class="btn" id="execute-btn" action>EXECUTE</div>
+    <nav class="editor-nav">
+      <span class="inner">Editor (Use Ctrl-Enter to execute)</span>
+      <div class="right-align-d-flex">
+        <button class="btn" id="execute-btn" action>EXECUTE</button>
+      </div>
     </nav>
   </header>
   <main>
@@ -34,15 +37,15 @@
       <div id="editor"></div>
     </div>
     <div id="console-container">
-      <nav id="console-separator"><span>Dev Console (Use Ctrl-I
-          to clear
-          console)</span>
-        <div class="btn" id="clear-btn" action>CLEAR</div>
+      <nav class="console-nav">
+        <span class="inner">Dev Console (Use Ctrl-I to clear console)</span>
+        <div class="right">
+          <button class="btn" id="clear-btn" action>CLEAR</button>
+        </div>
       </nav>
       <pre id="console">Welcome to the JS Console<br />&raquo;  </pre>
     </div>
   </main>
-
   <footer class="footer">
     <p class="copyright">
       Made with <span>&hearts;</span> by Gabriel Menezes | Using Ace editor</i>

@@ -16,21 +16,19 @@
 <body>
   <div>
     <nav class="text-dark d-flex align-items-center pl-2 bg-warning"><span>Editor (Use Ctrl-Enter to execute)</span>
-      <div class="btn btn-warning" action>EXECUTE</div>
+      <div class="btn btn-warning" id="execute-btn" action>EXECUTE</div>
     </nav>
     <div id="editor"></div>
   </div>
   <div>
     <nav class="text-light d-flex align-items-center pl-2 bg-dark"><span>Dev Console (Use Ctrl-I to clear
         console)</span>
-      <div class="btn btn-dark" action>CLEAR</div>
+      <div class="btn btn-dark" id="clear-btn" action>CLEAR</div>
     </nav>
     <pre id="console" class="border border-dark bg-light text-dark p-2">Welcome to the JS Console<br />&raquo;  </pre>
   </div>
 
   <!-- jQuery first-->
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
-    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <script src="/assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
   <script src="/assets/js/index.js" type="text/javascript" charset="utf-8"></script>
   <script src="/assets/js/console.js" type="text/javascript" charset="utf-8"></script>

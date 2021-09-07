@@ -22,13 +22,9 @@ window.addEventListener("keyup", function (event) {
   if (event.key === "Control") window.removeEventListener("keydown", kbd);
 });
 // For phones and devices without a control key
-$("[action]")
-  .get(0)
-  .addEventListener("click", function () {
-    eval(editor.getValue());
-  });
-$("[action]")
-  .get(1)
-  .addEventListener("click", function () {
-    console.clear();
-  });
+document.querySelector("#execute-btn").addEventListener("click", function () {
+  eval(editor.getValue());
+});
+document.querySelector("#clear-btn").addEventListener("click", function () {
+  console.clear();
+});

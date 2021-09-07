@@ -2,7 +2,7 @@
 // service workers only have permission to access files
 // in the same directory and sub - directories.
 
-var cacheName = "hello-pwa";
+var cacheName = "js-ide";
 var filesToCache = ["/", "index.html", "/assets/"];
 
 // service workers only have permission to access files in the same directory and sub-directories.

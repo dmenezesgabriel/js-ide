@@ -1,11 +1,3 @@
-window.onload = () => {
-  "use strict";
-
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/serviceWorker.js");
-  }
-};
-
 // initialize the content of the text editor to some Javascript
 const editorElement = document.querySelector("#editor");
 editorElement.textContent = `function echo(m) {\n\treturn m;\n}\nconsole.log(echo("Hello World"));`;

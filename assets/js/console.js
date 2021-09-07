@@ -5,54 +5,54 @@
   default_clear = console.clear;
   default_error = console.error;
   default_warn = console.warn;
+  consoleElement = document.querySelector("#console");
 
   console.log = function (...args) {
     for (let arg of args) {
       if (typeof arg == "object") {
-        $("#console").append(
+        consoleElement.innerHTML +=
           (JSON && JSON.stringify ? JSON.stringify(arg, undefined, 2) : arg) +
-            " "
-        );
+          " ";
       } else {
-        $("#console").append(arg + " ");
+        consoleElement.innerHTML += arg + " ";
       }
     }
     // Console prompt
-    $("#console").append("\n&raquo;  ");
+    consoleElement.innerHTML += "\n&raquo;  ";
 
     // So console is always scrolled to the bottom
-    $("#console").get(0).scrollTop = $("#console").get(0).scrollHeight;
+    consoleElement.scrollTop = consoleElement.scrollHeight;
 
     // Allow the default console action to happen
     default_log(...args);
   };
   console.error = function (event) {
-    $("#console").append("Error: " + event);
+    consoleElement.innerHTML += "Error: " + event;
 
     // Console prompt
-    $("#console").append("\n&raquo;  ");
+    consoleElement.innerHTML += "\n&raquo;  ";
 
     // So console is always scrolled to the bottom
-    $("#console").get(0).scrollTop = $("#console").get(0).scrollHeight;
+    consoleElement.scrollTop = consoleElement.scrollHeight;
 
     // Allow the default console action to happen
     default_error(event);
   };
-  console.warn = function (w) {
-    $("#console").append("Warning: " + w);
+  console.warn = function (event) {
+    consoleElement.innerHTML += "Warning: " + event;
 
     // Console prompt
-    $("#console").append("\n&raquo;  ");
+    consoleElement.innerHTML += "\n&raquo;  ";
 
     // So console is always scrolled to the bottom
-    $("#console").get(0).scrollTop = $("#console").get(0).scrollHeight;
+    consoleElement.scrollTop = consoleElement.scrollHeight;
 
     // Allow the default console action to happen
-    default_warn(w);
+    default_warn(event);
   };
   console.clear = function () {
     // Console prompt
-    $("#console").html("&raquo;  ");
+    consoleElement.innerHTML = "&raquo;  ";
     // Allow the default console action to happen
     default_clear();
   };

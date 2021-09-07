@@ -11,6 +11,12 @@
 - Make Editor config options
 - Apply OOP
 - Clean code
+- Add markdown editor
+- Add css editor
+- Add html editor
+- Add html preview
+- Change app icon
+- Apply PWA good practices
 
 ## References
 

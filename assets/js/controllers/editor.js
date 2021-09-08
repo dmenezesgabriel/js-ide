@@ -12,15 +12,21 @@ class Editor {
 
   kbd(event) {
     if (event.key === "i") console.clear();
-    if (event.key === "Enter") eval(editor.getValue());
+    if (event.key === "Enter") eval(this._editorObj.getValue());
   }
 
   setKeyShortcuts() {
+    var kbd = this.kbd.bind(this);
+
     window.addEventListener("keydown", function (event) {
-      if (event.key === "Control") window.addEventListener("keydown", kbd);
+      if (event.key === "Control") {
+        window.addEventListener("keydown", kbd);
+      }
     });
     window.addEventListener("keyup", function (event) {
-      if (event.key === "Control") window.removeEventListener("keydown", kbd);
+      if (event.key === "Control") {
+        window.removeEventListener("keydown", kbd);
+      }
     });
   }
 
@@ -40,6 +46,10 @@ class Editor {
   init() {
     this.setKeyShortcuts();
     this.setButtonActions();
+  }
+
+  getEditorText() {
+    return this._editorObj.getValue();
   }
 }
 

@@ -59,7 +59,7 @@ class ConsoleHelper {
       // Allow the default console action to happen
       default_clear();
     };
-    clear = console.clear;
+    let clear = console.clear;
   }
 }
 

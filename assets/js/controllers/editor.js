@@ -55,3 +55,14 @@ class Editor {
 
 let editor = new Editor();
 editor.init();
+
+function saveEditorText() {
+  let textContent = editor.getEditorText();
+  var downloadableLink = document.querySelector("#save-file");
+  downloadableLink.setAttribute(
+    "href",
+    "data:text/plain;charset=utf-8," + encodeURIComponent(textContent)
+  );
+  downloadableLink.download = "script" + ".js";
+  downloadableLink.target = "_blank";
+}

@@ -1,0 +1,16 @@
+#top-nav {
+  top: 0;
+  overflow: hidden;
+}
+
+#top-nav a {
+  float: left;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}
+
+#top-nav a:hover {
+  background-color: #ddd;
+  color: black;
+}

@@ -3,6 +3,8 @@ class EditorView {
     super(element);
   }
   _template(model) {
-    return ``;
+    return `
+    
+    `;
   }
 }

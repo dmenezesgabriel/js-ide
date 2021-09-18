@@ -20,24 +20,37 @@
   <header>
     <nav id="top-nav">
       <div class="top-nav-links">
-        <a href="/" class="active">Home</a>
-        <a id="save-file" onclick="saveEditorText();">Save</a>
+        <a class="nav-btn" id="save-file" onclick="">Open</a>
+        <a class="nav-btn" id="save-file" onclick="saveEditorText();">Save</a>
+      </div>
+      <div class="top-nav-links right">
+        <a href="https://github.com/dmenezesgabriel" class="nav-btn" target="_blank">Github</a>
       </div>
     </nav>
     <nav class="editor-nav">
-      <span class="inner">Editor (Use Ctrl-Enter to execute)</span>
-      <div class="right-align-d-flex">
-        <button class="btn" id="execute-btn" action>EXECUTE</button>
+      <div class="editor-nav-tabs">
+        <ul class="tabs-list">
+          <li class="nav-btn active-tab">hello.js</li>
+          <li class="nav-btn">Untitled</li>
+        </ul>
       </div>
     </nav>
+    <div class="tool-bar">
+      <div class="right">
+        <button class="btn" id="execute-btn" action>EXECUTE</button>
+      </div>
+    </div>
   </header>
+
+
   <main>
+
     <div id="editor-container">
+
       <div id="editor"></div>
     </div>
     <div id="console-container">
       <nav class="console-nav">
-        <span class="inner">Dev Console (Use Ctrl-I to clear console)</span>
         <div class="right">
           <button class="btn" id="clear-btn" action>CLEAR</button>
         </div>

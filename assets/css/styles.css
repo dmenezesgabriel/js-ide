@@ -1,4 +1,10 @@
 @import url(./reset-default-styles.css);
+@import url(./footer.css);
+@import url(./nav-top.css);
+@import url(./nav-editor.css);
+
+@import url(./tabs.css);
+
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 
 html {
@@ -17,44 +23,22 @@ body {
   min-height: 100vh;
 }
 
-header {
-  height: 10vh;
-}
-
-#top-nav {
-  top: 0;
+nav {
   left: 0;
-  overflow: hidden;
-  position: relative;
 }
 
-#top-nav a {
-  float: left;
-  text-decoration: none;
-  font-size: 15px;
-  color: white;
-  height: 100%;
-  padding: 5px;
-}
-
-#top-nav a:hover {
-  background-color: #ddd;
-  color: black;
+.nav-btn {
+  padding: 5px 10px;
 }
 
 main {
   height: 85vh;
 }
 
-.editor-nav,
 .console-nav {
   background-color: #212529;
   color: white;
   padding: 5px;
-}
-
-.editor-nav {
-  display: flex;
 }
 
 nav > span {
@@ -63,10 +47,6 @@ nav > span {
 
 .right {
   float: right;
-}
-
-.right-align-d-flex {
-  margin-left: auto;
 }
 
 #editor {
@@ -115,21 +95,3 @@ nav > span {
 .btn:hover {
   background-color: #04aa6d;
 }
-
-footer {
-  position: absolute;
-  height: 5vh;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #212529;
-  color: white;
-  text-align: center;
-  font-size: 12px;
-}
-
-@media (max-width: 680px) {
-  nav > span {
-    display: none;
-  }
-} ;

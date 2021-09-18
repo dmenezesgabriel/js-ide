@@ -1,6 +1,15 @@
 export class Editor {
-  constructor(content) {
+  constructor(name, content) {
+    this._name = name;
     this._content = content;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(name) {
+    this._name = name;
   }
 
   get content() {

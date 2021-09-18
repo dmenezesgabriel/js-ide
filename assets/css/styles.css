@@ -20,7 +20,6 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 nav {
@@ -41,10 +40,6 @@ main {
   padding: 5px;
 }
 
-nav > span {
-  font-size: 15px;
-}
-
 .right {
   float: right;
 }
@@ -63,6 +58,11 @@ nav > span {
   flex-direction: column;
   background-color: #282a36;
   color: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#console {
+  color: #4af626;
 }
 
 #console {

@@ -1,4 +1,5 @@
 import { Editor } from "../models/editor.js";
+import { EditorList } from "../models/editorList.js";
 
 export class EditorController {
   constructor() {
@@ -11,10 +12,18 @@ export class EditorController {
     this._editorObj.setTheme("ace/theme/dracula");
     this._editorObj.session.setTabSize(4);
     this._editorObj.session.setUseWrapMode(true);
+    //
+    this._editorList = new EditorList();
   }
 
   _createEditor() {
     return new Editor(this._content);
+  }
+
+  addEditor(event) {
+    event.preventDefault();
+    let editor = this._createEditor();
+    this._editorList.add(editor);
   }
 
   kbd(event) {

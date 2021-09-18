@@ -1,5 +1,8 @@
-class Editor {
+import { Editor } from "../models/editor.js";
+
+export class EditorController {
   constructor() {
+    this._content = "";
     this._editorElement = document.querySelector("#editor");
     this._editorElement.textContent = `function echo(m) {\n\treturn m;\n}\nconsole.log(echo("Hello World"));`;
     this._editorElement.style.fontSize = "15px";
@@ -8,6 +11,10 @@ class Editor {
     this._editorObj.setTheme("ace/theme/dracula");
     this._editorObj.session.setTabSize(4);
     this._editorObj.session.setUseWrapMode(true);
+  }
+
+  _createEditor() {
+    return new Editor(this._content);
   }
 
   kbd(event) {
@@ -53,11 +60,11 @@ class Editor {
   }
 }
 
-let editor = new Editor();
-editor.init();
+let editorController = new EditorController();
+editorController.init();
 
 function saveEditorText() {
-  let textContent = editor.getEditorText();
+  let textContent = editorController.getEditorText();
   var downloadableLink = document.querySelector("#save-file");
   downloadableLink.setAttribute(
     "href",

@@ -18,3 +18,12 @@ li.active-tab {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: none;
 }
+
+.btn-close-tab {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-close-tab:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}

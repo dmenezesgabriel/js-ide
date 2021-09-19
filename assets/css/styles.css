@@ -30,6 +30,11 @@ nav {
   padding: 5px 10px;
 }
 
+.nav-btn:hover {
+  background-color: #383b4b;
+  color: black;
+}
+
 main {
   height: 85vh;
 }

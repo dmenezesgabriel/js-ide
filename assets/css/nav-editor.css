@@ -1,4 +1,10 @@
-.editor-nav {
+#editor-nav {
   background-color: #212529;
+  color: white;
+}
+
+#editor-nav a {
+  float: left;
+  text-decoration: none;
   color: white;
 }

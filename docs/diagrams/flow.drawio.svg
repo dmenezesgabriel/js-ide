@@ -1,0 +1,68 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="401px" height="211px" viewBox="-0.5 -0.5 401 211" content="&lt;mxfile&gt;&lt;diagram id=&quot;c8L6lVePmLAsW46AFC_g&quot; name=&quot;Page-1&quot;&gt;xVZLb9wgEP41vlZ+1N7uMd2kj0OlSnto9kjN1EbCsMJsbPfXFxYwxmzStEqyJzPfPJj5ZjwiKXbd+FmgY/uNY6BJnuIxKW6TPM/Kaqs+GpkMsskyAzSCYGvkgT35DRZMLXoiGPrAUHJOJTmGYM0Zg1oGGBKCD6HZL07DW4+ogQjY14jG6A+CZWvQbZp6/AuQprU3l07RIWdrgb5FmA8LqLhLip3gXJpTN+6Aau4cLcbv0yPaOS8BTD7HITcOD4iebGk3GGs20U+boJxc0YKfGAbtmCXFx6ElEvZHVGvtoNqssFZ21KptXBASxkdzy+aK1aQA70CKSZlYh/eWo8mRaMTBE545GtsF2ZXFkO1xMwf2PKiDpeIyLUVES8QGMHyjJ0lJNUV9T+qQABiJvF+cD+qcviutdKtrTJ0wOYGpPO+XwsJLi97tLDk/kxzgaGhXVKsC+EnUEPReItGAG9TLDVlQXl5g3GECKJLkIUziUhvsDd85UenN/c42YcO3q0aa3K3TcqZXcWZHG+fDKo4pOIpznom56GeNSRmNyU4AknBuBpFcaFvWS8QU59f+nWYenvifqlf6n6qIqK+sFtDBuW+eK3x1loo0ZClP33DtbF5u7fhVc1ho/rZ2/KY5BIvmJddOGa+d6pprZ35UTCv5n/dOFQbK1iPx34tHif5JYMz9u6q4+wM=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <rect x="0" y="0" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 30px; margin-left: 1px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Add tab
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="60" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Add tab
+                </text>
+            </switch>
+        </g>
+        <path d="M 120 30 L 233.63 30" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 238.88 30 L 231.88 33.5 L 233.63 30 L 231.88 26.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="240" y="0" width="160" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 30px; margin-left: 241px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Create editor instance
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="320" y="34" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Create editor instance
+                </text>
+            </switch>
+        </g>
+        <rect x="260" y="150" width="120" height="60" rx="9" ry="9" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 180px; margin-left: 261px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                Increment editor id
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="320" y="184" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Increment editor id
+                </text>
+            </switch>
+        </g>
+        <path d="M 320 60 L 320 143.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 320 148.88 L 316.5 141.88 L 320 143.63 L 323.5 141.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

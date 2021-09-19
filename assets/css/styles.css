@@ -44,11 +44,11 @@ main {
   float: right;
 }
 
-#editor {
+.editor-content {
   height: 100%;
 }
 
-#editor-container {
+#editorView {
   height: 70%;
 }
 

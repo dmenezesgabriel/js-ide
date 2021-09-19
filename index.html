@@ -20,20 +20,19 @@
   <header>
     <nav id="top-nav">
       <div class="top-nav-links">
-        <a class="nav-btn" id="save-file" onclick="">Open</a>
-        <a class="nav-btn" id="save-file" onclick="saveEditorText();">Save</a>
+        <a class="nav-btn" id="open-file">Open</a>
+        <a class="nav-btn" id="save-file">Save</a>
       </div>
       <div class="top-nav-links right">
         <a href="https://github.com/dmenezesgabriel" class="nav-btn" target="_blank">Github</a>
       </div>
     </nav>
-    <nav class="editor-nav">
-      <div class="editor-nav-tabs">
-        <ul class="tabs-list">
-          <li class="nav-btn active-tab">hello.js <span class="btn-close-tab">&times;</span></li>
-          <!-- <li class="nav-btn">Untitled</li> -->
-          <li class="nav-btn"><span>&#43;</span></li>
-        </ul>
+    <nav id="editor-nav">
+      <div class="tabs-list" id="tabView">
+        <a class="nav-btn active-tab">hello.js <span class="btn-close-tab">&times;</span></a>
+      </div>
+      <div class="tab-control">
+        <a class="nav-btn btn-add-tab"><span id="new-editor">&#43;</span></a>
       </div>
     </nav>
     <div class="tool-bar">
@@ -43,9 +42,10 @@
     </div>
   </header>
   <main>
-    <div id="editor-container">
-      <div id="editor"></div>
+    <div id="editorView">
+      <div class="editor-content" id="editorx"></div>
     </div>
+
     <div id="console-container">
       <div class="tool-bar">
         <div class="right">

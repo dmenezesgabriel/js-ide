@@ -5,15 +5,14 @@ export class TabView extends View {
     super(element);
   }
   _template(model) {
-    return `<ul class="tabs-list">
-              ${model.editorList
+    return `
+              ${model.editors
                 .map(
                   (editor) => `
-                <li class="nav-btn">${editor.name}</li>
+                <a class="nav-btn">${editor.name}<span class="btn-close-tab">&times;</span></a>
               `
                 )
                 .join("")}
-
-            </ul>`;
+            `;
   }
 }

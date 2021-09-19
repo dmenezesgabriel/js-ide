@@ -1,20 +1,15 @@
 .tabs-list {
-  width: fit-content;
-  margin: 0;
-  padding: 0;
   background-color: #282a36;
-  font-size: 0;
+  font-size: 0px;
 }
 
-.tabs-list li {
-  display: inline-block;
-  list-style: none;
+.tabs-list a {
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   font-size: 12px;
 }
 
-li.active-tab {
+a.active-tab {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: none;
 }
@@ -25,5 +20,14 @@ li.active-tab {
 }
 
 .btn-close-tab:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-add-tab {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-add-tab:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }

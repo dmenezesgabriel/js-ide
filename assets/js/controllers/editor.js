@@ -42,6 +42,7 @@ export class EditorController {
     this._tabView.update(this._editorList);
     this._initEditor();
     this._currentEditor = editor;
+    let $ = document.querySelector.bind(document);
   }
 
   _initEditor() {

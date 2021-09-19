@@ -95,3 +95,7 @@ main {
 .btn:hover {
   background-color: #04aa6d;
 }
+
+.editor-content {
+  display: none;
+}

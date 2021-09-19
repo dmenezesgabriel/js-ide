@@ -8,7 +8,7 @@ export class EditorView extends View {
     return `${model.editors
       .map(
         (editor) => `
-                <div class="editor-content" id="${editor.id}"></div>
+                <div class="editor-content" id="editor-${editor.id}"></div>
               `
       )
       .join("")}

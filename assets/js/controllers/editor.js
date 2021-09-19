@@ -8,16 +8,6 @@ export class EditorController {
     let $ = document.querySelector.bind(document);
     this._content = "";
     this._currentEditorId = 0;
-    // view
-    this._editorElement = document.querySelector("#editorx");
-    this._editorElement.textContent = `function echo(m) {\n\treturn m;\n}\nconsole.log(echo("Hello World"));`;
-    this._editorElement.style.fontSize = "15px";
-    // view
-    this._editorObj = ace.edit("editorx");
-    this._editorObj.session.setMode("ace/mode/javascript");
-    this._editorObj.setTheme("ace/theme/dracula");
-    this._editorObj.session.setTabSize(4);
-    this._editorObj.session.setUseWrapMode(true);
     // controller
     this._editorList = new EditorList();
     this._editorView = new EditorView($("#editorView"));
@@ -33,17 +23,35 @@ export class EditorController {
     );
   }
 
+  initEditor() {
+    this._editorElement = document.querySelector(
+      `#editor-${this._currentEditorId}`
+    );
+    this._editorElement.textContent = `function echo(m) {\n\treturn m;\n}\nconsole.log(echo("Hello World ${this._currentEditorId}"));`;
+    this._editorElement.style.fontSize = "15px";
+
+    this._currentEditor = ace.edit(`editor-${this._currentEditorId}`);
+    this._currentEditor.session.setMode("ace/mode/javascript");
+    this._currentEditor.setTheme("ace/theme/dracula");
+    this._currentEditor.session.setTabSize(4);
+    this._currentEditor.session.setUseWrapMode(true);
+    this._editorElement.style.display = "block";
+    this._editorElement.style.display = "block";
+    document.querySelector(`#tab-editor-${this._currentEditorId}`).className +=
+      " active-tab";
+  }
+
   addEditor() {
     let editor = this._createEditor();
     this._editorList.add(editor);
-    console.log(this._editorList);
     this._editorView.update(this._editorList);
     this._tabView.update(this._editorList);
+    this.initEditor();
   }
 
   kbd(event) {
     if (event.key === "i") console.clear();
-    if (event.key === "Enter") eval(this._editorObj.getValue());
+    if (event.key === "Enter") eval(this._currentEditor.getValue());
   }
 
   setKeyShortcuts() {
@@ -71,16 +79,17 @@ export class EditorController {
   }
 
   runCode() {
-    eval(this._editorObj.getValue());
+    eval(this._currentEditor.getValue());
   }
 
   init() {
     this.setKeyShortcuts();
     this.setButtonActions();
+    this.addEditor();
   }
 
   getEditorText() {
-    return this._editorObj.getValue();
+    return this._currentEditor.getValue();
   }
 }
 

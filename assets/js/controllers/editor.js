@@ -7,9 +7,6 @@ import { Uuidv4 } from "../helpers/id.js";
 export class EditorController {
   constructor() {
     let $ = document.querySelector.bind(document);
-    this._content = "";
-    this._currentEditorId = 0;
-    this._currentEditor;
     // controller
     this._editorList = new EditorList();
     this._editorView = new EditorView($("#editorView"));
@@ -25,7 +22,6 @@ export class EditorController {
   }
 
   _saveEditorContent() {
-    console.log("save");
     // if editor exists, store editor content before change tabs
     if (typeof this._currentEditor !== "undefined") {
       this._currentEditor = this._editorList.getEditor(this._currentEditorId);
@@ -53,7 +49,7 @@ export class EditorController {
 
   _createEditor() {
     this._currentEditorId = Uuidv4.uuidv4();
-    return new Editor(this._currentEditorId, "untitled", this._content);
+    return new Editor(this._currentEditorId, "untitled", "");
   }
 
   _addEditor() {
@@ -63,6 +59,7 @@ export class EditorController {
     this._editorView.update(this._editorList);
     this._tabView.update(this._editorList);
     this._initEditor();
+
     this._currentEditor = editor;
   }
 

@@ -2,6 +2,7 @@ import { Editor } from "../models/editor.js";
 import { EditorList } from "../models/editorList.js";
 import { EditorView } from "../views/editor.js";
 import { TabView } from "../views/tab.js";
+import { Uuidv4 } from "../helpers/id.js";
 
 export class EditorController {
   constructor() {
@@ -20,21 +21,26 @@ export class EditorController {
     $("#clear-btn").onclick = function () {
       console.clear();
     };
-    document.addEventListener("click", function (event) {
-      if (event.target && event.target.classList.contains("editor-tab")) {
-        let editorId = event.target.getAttribute("data-internalid");
-        $(`#${editorId}`);
+    document.addEventListener("click", this._setEditor.bind(this));
+  }
+
+  _setEditor(event) {
+    if (event.target && event.target.classList.contains("editor-tab")) {
+      let editorId = event.target.getAttribute("data-internalid");
+      if (this._currentEditorId == editorId) {
+        return;
       }
-    });
+      this._editorElement.style.display = "none";
+      this._currentEditorId = editorId;
+      document.querySelector(`#editor-${editorId}`);
+      console.log(this._currentEditorId);
+      this._initEditor();
+    }
   }
 
   _createEditor() {
-    this._currentEditorId++;
-    return new Editor(
-      this._currentEditorId,
-      `untitled-${this._currentEditorId}`,
-      this._content
-    );
+    this._currentEditorId = Uuidv4.uuidv4();
+    return new Editor(this._currentEditorId, "untitled", this._content);
   }
 
   _addEditor() {
@@ -48,7 +54,6 @@ export class EditorController {
     this._tabView.update(this._editorList);
     this._initEditor();
     this._currentEditor = editor;
-    let $ = document.querySelector.bind(document);
   }
 
   _initEditor() {
@@ -64,9 +69,10 @@ export class EditorController {
     this._ace.session.setTabSize(4);
     this._ace.session.setUseWrapMode(true);
     this._editorElement.style.display = "block";
-    document
-      .querySelector(`#tab-editor-${this._currentEditorId}`)
-      .classList.toggle("active-tab");
+    this._currentEditorTab = document.querySelector(
+      `#tab-editor-${this._currentEditorId}`
+    );
+    this._currentEditorTab.classList.toggle("active-tab");
   }
 
   _getEditorText() {

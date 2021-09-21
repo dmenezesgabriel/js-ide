@@ -31,9 +31,10 @@ export class EditorController {
         return;
       }
       this._editorElement.style.display = "none";
+      this._currentEditorTab.classList.toggle("active-tab");
+      this._ace.destroy();
       this._currentEditorId = editorId;
       document.querySelector(`#editor-${editorId}`);
-      console.log(this._currentEditorId);
       this._initEditor();
     }
   }

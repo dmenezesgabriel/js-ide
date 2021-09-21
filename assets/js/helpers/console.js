@@ -21,7 +21,7 @@ class ConsoleHelper {
         }
       }
       // Console prompt
-      consoleElement.innerHTML += "\n&raquo;  ";
+      consoleElement.innerHTML += "\n$  ";
 
       // So console is always scrolled to the bottom
       consoleElement.scrollTop = consoleElement.scrollHeight;
@@ -33,7 +33,7 @@ class ConsoleHelper {
       consoleElement.innerHTML += "Error: " + event;
 
       // Console prompt
-      consoleElement.innerHTML += "\n&raquo;  ";
+      consoleElement.innerHTML += "\n$  ";
 
       // So console is always scrolled to the bottom
       consoleElement.scrollTop = consoleElement.scrollHeight;
@@ -45,7 +45,7 @@ class ConsoleHelper {
       consoleElement.innerHTML += "Warning: " + event;
 
       // Console prompt
-      consoleElement.innerHTML += "\n&raquo;  ";
+      consoleElement.innerHTML += "\n$  ";
 
       // So console is always scrolled to the bottom
       consoleElement.scrollTop = consoleElement.scrollHeight;
@@ -55,7 +55,7 @@ class ConsoleHelper {
     };
     console.clear = function () {
       // Console prompt
-      consoleElement.innerHTML = "&raquo;  ";
+      consoleElement.innerHTML = "$  ";
       // Allow the default console action to happen
       default_clear();
     };

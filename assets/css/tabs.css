@@ -1,0 +1,33 @@
+.tabs-list {
+  background-color: #282a36;
+  font-size: 0px;
+}
+
+.tabs-list a {
+  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+}
+
+a.active-tab {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: none;
+}
+
+.btn-close-tab {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-close-tab:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-add-tab {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-add-tab:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}

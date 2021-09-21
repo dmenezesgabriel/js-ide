@@ -20,29 +20,38 @@
   <header>
     <nav id="top-nav">
       <div class="top-nav-links">
-        <a href="/" class="active">Home</a>
-        <a id="save-file" onclick="saveEditorText();">Save</a>
+        <a class="nav-btn" id="open-file">Open</a>
+        <a class="nav-btn" id="save-current-editor-content">Save</a>
+      </div>
+      <div class="top-nav-links right">
+        <a href="https://github.com/dmenezesgabriel" class="nav-btn" target="_blank">Github</a>
       </div>
     </nav>
-    <nav class="editor-nav">
-      <span class="inner">Editor (Use Ctrl-Enter to execute)</span>
-      <div class="right-align-d-flex">
+    <nav id="editor-nav">
+      <div class="tabs-list" id="tabView">
+      </div>
+      <div class="tab-control">
+        <a class="nav-btn btn-add-tab"><span id="add-new-editor">&#43;</span></a>
+      </div>
+    </nav>
+    <div class="tool-bar">
+      <div class="right">
         <button class="btn" id="execute-btn" action>EXECUTE</button>
       </div>
-    </nav>
+    </div>
   </header>
   <main>
-    <div id="editor-container">
-      <div id="editor"></div>
+    <div id="editorView">
     </div>
+
     <div id="console-container">
-      <nav class="console-nav">
-        <span class="inner">Dev Console (Use Ctrl-I to clear console)</span>
+      <div class="tool-bar">
         <div class="right">
           <button class="btn" id="clear-btn" action>CLEAR</button>
         </div>
-      </nav>
-      <pre id="console">Welcome to the JS Console<br />&raquo;  </pre>
+      </div>
+
+      <pre id="console">Welcome to the JS Console<br />$  </pre>
     </div>
   </main>
   <footer class="footer">

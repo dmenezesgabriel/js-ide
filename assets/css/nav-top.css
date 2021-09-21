@@ -1,0 +1,11 @@
+#top-nav {
+  top: 0;
+  overflow: hidden;
+}
+
+#top-nav a {
+  float: left;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}

@@ -18,7 +18,7 @@ export class EditorController {
     $("#clear-btn").onclick = function () {
       console.clear();
     };
-    document.addEventListener("click", this._setEditor.bind(this));
+    document.addEventListener("click", this._generalEvents.bind(this));
   }
 
   _saveEditorContent() {
@@ -29,24 +29,38 @@ export class EditorController {
     }
   }
 
-  _setEditor(event) {
+  _generalEvents(event) {
     if (event.target && event.target.classList.contains("editor-tab")) {
-      let editorId = event.target.getAttribute("data-internalid");
-      if (this._currentEditorId == editorId) {
-        return;
-      }
-      this._saveEditorContent();
-      this._editorElement.style.display = "none";
-      this._currentEditorTab.classList.toggle("active-tab");
-      this._currentEditor = this._editorList.getEditor(editorId);
-      this._currentEditorId = editorId;
-      this._editorElement = document.querySelector(
-        `#editor-${this._currentEditorId}`
-      );
-      this._editorElement.textContent = this._currentEditor.content;
-      this._ace.destroy();
-      this._initEditor();
+      this._setEditor(event);
     }
+    if (event.target && event.target.classList.contains("btn-close-tab")) {
+      event.target.parentNode.style.display = "none";
+      // define editor state
+      // open
+      // closed
+      // focus
+      // background
+      // on init editor view update filter only not closed
+      console.log("close tab");
+    }
+  }
+
+  _setEditor(event) {
+    let editorId = event.target.getAttribute("data-internalid");
+    if (this._currentEditorId == editorId) {
+      return;
+    }
+    this._saveEditorContent();
+    this._editorElement.style.display = "none";
+    this._currentEditorTab.classList.toggle("active-tab");
+    this._currentEditor = this._editorList.getEditor(editorId);
+    this._currentEditorId = editorId;
+    this._editorElement = document.querySelector(
+      `#editor-${this._currentEditorId}`
+    );
+    this._editorElement.textContent = this._currentEditor.content;
+    this._ace.destroy();
+    this._initEditor();
   }
 
   _createEditor() {

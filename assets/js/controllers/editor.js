@@ -24,17 +24,29 @@ export class EditorController {
     document.addEventListener("click", this._setEditor.bind(this));
   }
 
+  _saveEditorContent() {
+    console.log("save");
+    // if editor exists, store editor content before change tabs
+    if (typeof this._currentEditor !== "undefined") {
+      this._currentEditor = this._editorList.getEditor(this._currentEditorId);
+      this._currentEditor.content = this._getEditorText();
+    }
+  }
+
   _setEditor(event) {
     if (event.target && event.target.classList.contains("editor-tab")) {
       let editorId = event.target.getAttribute("data-internalid");
       if (this._currentEditorId == editorId) {
         return;
       }
+      this._saveEditorContent();
       this._editorElement.style.display = "none";
       this._currentEditorTab.classList.toggle("active-tab");
       this._ace.destroy();
+      this._currentEditor = this._editorList.getEditor(editorId);
       this._currentEditorId = editorId;
-      document.querySelector(`#editor-${editorId}`);
+      document.querySelector(`#editor-${this._currentEditorId}`);
+      this._editorElement.textContent = this._currentEditor.content;
       this._initEditor();
     }
   }
@@ -45,10 +57,7 @@ export class EditorController {
   }
 
   _addEditor() {
-    // if editor exists, store editor content before change tabs
-    if (typeof this._currentEditor !== "undefined") {
-      this._currentEditor.content = this._getEditorText();
-    }
+    this._saveEditorContent();
     let editor = this._createEditor();
     this._editorList.add(editor);
     this._editorView.update(this._editorList);
@@ -61,9 +70,7 @@ export class EditorController {
     this._editorElement = document.querySelector(
       `#editor-${this._currentEditorId}`
     );
-    this._editorElement.textContent = `function echo(m) {\n\treturn m;\n}\nconsole.log(echo("Hello World ${this._currentEditorId}"));`;
     this._editorElement.style.fontSize = "15px";
-
     this._ace = ace.edit(`editor-${this._currentEditorId}`);
     this._ace.session.setMode("ace/mode/javascript");
     this._ace.setTheme("ace/theme/dracula");

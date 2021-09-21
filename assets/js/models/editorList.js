@@ -8,7 +8,7 @@ export class EditorList {
   }
 
   _getEditorIndex(id) {
-    return this._editors.findIndex((editor) => editor.id == id);
+    return this._editors.findIndex((editor) => editor.id === id);
   }
 
   getEditor(id) {

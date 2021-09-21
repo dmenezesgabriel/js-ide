@@ -38,11 +38,13 @@ export class EditorController {
       this._saveEditorContent();
       this._editorElement.style.display = "none";
       this._currentEditorTab.classList.toggle("active-tab");
-      this._ace.destroy();
       this._currentEditor = this._editorList.getEditor(editorId);
       this._currentEditorId = editorId;
-      document.querySelector(`#editor-${this._currentEditorId}`);
+      this._editorElement = document.querySelector(
+        `#editor-${this._currentEditorId}`
+      );
       this._editorElement.textContent = this._currentEditor.content;
+      this._ace.destroy();
       this._initEditor();
     }
   }
@@ -59,7 +61,6 @@ export class EditorController {
     this._editorView.update(this._editorList);
     this._tabView.update(this._editorList);
     this._initEditor();
-
     this._currentEditor = editor;
   }
 

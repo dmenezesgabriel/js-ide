@@ -20,6 +20,12 @@ export class EditorController {
     $("#clear-btn").onclick = function () {
       console.clear();
     };
+    document.addEventListener("click", function (event) {
+      if (event.target && event.target.classList.contains("editor-tab")) {
+        let editorId = event.target.getAttribute("data-internalid");
+        $(`#${editorId}`);
+      }
+    });
   }
 
   _createEditor() {
@@ -58,8 +64,9 @@ export class EditorController {
     this._ace.session.setTabSize(4);
     this._ace.session.setUseWrapMode(true);
     this._editorElement.style.display = "block";
-    document.querySelector(`#tab-editor-${this._currentEditorId}`).className +=
-      " active-tab";
+    document
+      .querySelector(`#tab-editor-${this._currentEditorId}`)
+      .classList.toggle("active-tab");
   }
 
   _getEditorText() {
